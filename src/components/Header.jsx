@@ -11,7 +11,6 @@ const Header = ({ account, setAccount }) => {
         method: "eth_requestAccounts",
       });
       setAccount(accounts[0]);
-      console.log(accounts);
     } catch (error) {
       console.error(error);
     }

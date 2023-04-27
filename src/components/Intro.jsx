@@ -23,6 +23,10 @@ const Intro = ({ account }) => {
           <div className="font-bold">--</div>
           <div className="text-gray-600">아이템</div>
         </div>
+        <div className="ml-4">
+          <div className="font-bold">--</div>
+          <div className="text-gray-600">아이템</div>
+        </div>
       </div>
     </div>
   );

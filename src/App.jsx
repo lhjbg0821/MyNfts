@@ -9,7 +9,7 @@ function App() {
   const [account, setAccount] = useState("");
   return (
     <BrowserRouter>
-      <div className="">
+      <div className="min-h-screen">
         <Header account={account} setAccount={setAccount} />
         <Routes>
           <Route path="/" element={<Main account={account} />} />
