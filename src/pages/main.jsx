@@ -63,7 +63,7 @@ const Main = ({ account }) => {
         mintedNft={mintedNft}
         myNft={myNft}
       />
-      <Nfts page={page} />
+      <Nfts page={page} totalNft={totalNft} mintedNft={mintedNft} />
     </div>
   );
 };

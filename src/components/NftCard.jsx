@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 
-const NftCard = () => {
+const NftCard = ({ tokenId, metadata, mintedNft }) => {
   return (
     <div className="w-96 rounded-b-xl text-gray-50 mx-8 mt-4">
       <div className=" rounded-t-xl">
-        <img
-          className="rounded-t-xl"
-          src={`${process.env.PUBLIC_URL}/images/profile.png`}
-        />
+        <img className="rounded-t-xl" />
       </div>
       <div className="bg-gray-800 text-2xl rounded-b-xl pl-4 pt-2">
         <div className="text-gray-400">ollok</div>
