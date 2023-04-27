@@ -2,12 +2,34 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import NftCard from "./NftCard";
 
-const Nfts = () => {
+const Nfts = ({ page }) => {
   const [nfts, setNfts] = useState();
 
-  const getNfts = async () => {
+  const getNfts = async (p) => {
     try {
-      const response = await axios.get(`${process.env.PUBLIC_URL}`);
+      for (let i = 0; i < 10; i++) {
+        const tokenId = i + 1 + (p - 1) * 10;
+
+        let response = await axios.get(
+          `${process.env.REACT_APP_JSON_URL}/${tokenId}.json`
+        );
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const pageComp = () => {
+    try {
+      let pageArray = [];
+
+      for (let i = 0; i < page; i++) {
+        pageArray.push(
+          <button key={i} className={`ml-4`}>
+            페이지
+          </button>
+        );
+      }
     } catch (error) {
       console.error(error);
     }
@@ -33,6 +55,7 @@ const Nfts = () => {
             <div>Loading...</div>
           )}
         </ul>
+        <NftCard />
       </div>
     </div>
   );

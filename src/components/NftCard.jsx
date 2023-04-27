@@ -9,7 +9,7 @@ const NftCard = () => {
           src={`${process.env.PUBLIC_URL}/images/profile.png`}
         />
       </div>
-      <div className="bg-gray-700 text-2xl rounded-b-xl pl-4 pt-2">
+      <div className="bg-gray-800 text-2xl rounded-b-xl pl-4 pt-2">
         <div className="text-gray-400">ollok</div>
         <div>타이틀</div>
         <div className="flex justify-end mx-4 py-2">
