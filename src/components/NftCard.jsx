@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const NftCard = ({ tokenId, metadata, mintedNft }) => {
   return (
-    <div className="w-96 rounded-b-xl  text-gray-50 mx-8 mt-4">
+    <div className=" w-76 relative rounded-b-xl  text-gray-50 mx-8 mt-4">
       {parseInt(mintedNft) < tokenId && (
-        <div className="absolute w-full h-full bg-opacity-50 rounded-2xl flex justify-center items-center text-4xl font-bold">
+        <div className="absolute w-full h-full bg-gray-500 bg-opacity-50 rounded-xl flex justify-center items-center text-4xl font-bold">
           Not Minted.
         </div>
       )}
@@ -25,7 +25,7 @@ const NftCard = ({ tokenId, metadata, mintedNft }) => {
           <Link to={`${tokenId}`} />
           <button
             disabled={parseInt(mintedNft) < tokenId}
-            className="bg-main text-gray-950 rounded-full px-4 py-2 hover:bg-gray-700 hover:text-gray-50"
+            className="bg-main text-gray-950 rounded-full px-4 py-2 mb-2 hover:bg-gray-700 hover:text-gray-50"
           >
             Detail
           </button>
