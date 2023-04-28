@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Main from "./pages/main";
 import Detail from "./pages/detail";
 import { useState } from "react";
+import Log from "./pages/log";
 
 function App() {
   const [account, setAccount] = useState("");
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main account={account} />} />
           <Route path="/:tokenId" element={<Detail />} />
+          <Route path="/log" element={<Log />} />
         </Routes>
         <Footer />
       </div>
