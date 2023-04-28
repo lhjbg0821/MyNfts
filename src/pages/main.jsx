@@ -30,6 +30,7 @@ const Main = ({ account }) => {
 
       const response = await contract.methods.totalSupply().call();
       setMintedNft(response);
+      setPage(parseInt((parseInt(response) - 1) / 8) + 1);
     } catch (error) {
       console.error(error);
     }

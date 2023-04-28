@@ -26,7 +26,7 @@ const Header = ({ account, setAccount }) => {
             <div>
               <GiChessKing size={30} />
             </div>
-            <div className="ml-4 text-3xl text-main">OllOK BCS</div>
+            <div className="ml-4 text-4xl text-main">OllOK BCS</div>
           </div>
         </Link>
 
